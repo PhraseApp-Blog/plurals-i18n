@@ -23,6 +23,7 @@ function changeLanguage(lang) {
 }
 
 i18next
+  .use(window.i18nextICU)
   .init({
     lng: "en",
     debug: true,
@@ -31,20 +32,22 @@ i18next
         translation: {
           lblCount: "Count",
           lblMessage: "Message",
-          message_one: "🌳 We've planted {{count, number}} tree so far!",
-          message_other: "🌳 We've planted {{count, number}} trees so far!",
+          message:
+            "🌳 We've planted {count, plural, one {# tree} other {# trees}} so far!",
         },
       },
       ar: {
         translation: {
           lblCount: "العدد",
           lblMessage: "الرسالة",
-          message_zero: "🌳 لم نزرع أي شجرة حتى الآن!",
-          message_one: "🌳 لقد زرعنا شجرة {{count, number}} حتى الآن!",
-          message_two: "🌳 لقد زرعنا شجرتين {{count, number}} حتى الآن!",
-          message_few: "🌳 لقد زرعنا {{count, number}} شجرات حتى الآن!",
-          message_many: "🌳 لقد زرعنا {{count, number}} شجرة حتى الآن!",
-          message_other: "🌳 لقد زرعنا {{count, number}} شجرة حتى الآن!",
+          message: `{count, plural,
+                zero {🌳 لم نزرع أي شجرة حتى الآن!}
+                one {🌳 لقد زرعنا شجرة # حتى الآن!}
+                two {🌳 لقد زرعنا شجرتين # حتى الآن!}
+                few {🌳 لقد زرعنا # شجرات حتى الآن!}
+                many {🌳 لقد زرعنا # شجرة حتى الآن!}
+                other {🌳 لقد زرعنا # شجرة حتى الآن!}
+            }`,
         },
       },
     },
