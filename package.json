@@ -1,0 +1,15 @@
+{
+  "name": "plurals-i18n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:watch": "tailwindcss -i ./tailwind.css -o ./styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
