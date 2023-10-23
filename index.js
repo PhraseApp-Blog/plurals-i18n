@@ -2,7 +2,6 @@ const input = document.querySelector("#input");
 const output = document.querySelector("#output");
 const lblCount = document.querySelector("#lblCount");
 const lblMessage = document.querySelector("#lblMessage");
-const langSelector = document.querySelector("#langSelector");
 
 const initialValue = 23456789;
 input.value = initialValue;
