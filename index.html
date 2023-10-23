@@ -10,39 +10,55 @@
     <main
       class="min-h-screen flex flex-col justify-center items-center px-10 max-w-md mx-auto"
     >
-      <div class="flex gap-2">
+      <div class="flex gap-2" dir="ltr">
         <i class="not-italic">🌐</i>
-        <ul class="flex gap-2">
+        <ul class="flex gap-3">
           <li>
-            <a href="#" class="text-lime-500 underline font-light">English</a>
+            <a
+              href="#"
+              class="text-lime-500 underline font-light"
+              onclick="changeLanguage('en')"
+              >English</a
+            >
           </li>
           <li>
-            <a href="#" class="text-lime-500 underline font-light">Arabic</a>
+            <a
+              href="#"
+              class="text-lime-500 underline font-light"
+              onclick="changeLanguage('ar')"
+              >Arabic (العربية)</a
+            >
           </li>
         </ul>
       </div>
 
       <label
+        id="lblCount"
         for="input"
-        class="text-left block w-full uppercase font-extralight text-sm ps-1 mb-1 mt-5"
+        class="block w-full uppercase font-extralight text-sm ps-1 mb-1 mt-5"
         >Count</label
       >
       <input
         id="input"
         type="number"
-        class="bg-stone-800 text-stone-100 px-3 py-2 rounded-md shadow-sm w-full"
+        class="bg-stone-800 text-stone-100 px-3 py-2 rounded-md shadow-md w-full"
         placeholder="Enter number..."
       />
 
       <dl class="mt-3 w-full">
-        <dt class="text-left block uppercase font-extralight text-sm ps-1 mb-1">
+        <dt
+          id="lblMessage"
+          class="block uppercase font-extralight text-sm ps-1 mb-1"
+        >
           Message
         </dt>
-        <dd id="output" class="p-3 bg-stone-800 shadow-sm rounded-md">
+        <dd id="output" class="p-3 bg-stone-800 shadow-md rounded-md">
           Loading...
         </dd>
       </dl>
     </main>
+
+    <script src="https://unpkg.com/i18next@23.6.0/dist/umd/i18next.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
