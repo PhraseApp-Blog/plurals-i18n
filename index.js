@@ -1,16 +1,18 @@
 const input = document.querySelector("#input");
 const output = document.querySelector("#output");
+const lblCount = document.querySelector("#lblCount");
+const lblMessage = document.querySelector("#lblMessage");
+const langSelector = document.querySelector("#langSelector");
 
 const initialValue = 23456789;
 input.value = initialValue;
 input.addEventListener("input", render);
 
 function render() {
-  document.querySelector("#lblCount").textContent = i18next.t("count_label");
-  document.querySelector("#lblMessage").textContent =
-    i18next.t("message_label");
+  lblCount.textContent = i18next.t("lblCount");
+  lblMessage.textContent = i18next.t("lblMessage");
 
-  output.textContent = i18next.t("message", { count: input.value });
+  output.textContent = i18next.t("message", { count: Number(input.value) });
 }
 
 function changeLanguage(lang) {
@@ -27,16 +29,22 @@ i18next
     resources: {
       en: {
         translation: {
-          count_label: "Count",
-          message_label: "Message",
-          message: "🌳 We've planted {{count}} trees so far!",
+          lblCount: "Count",
+          lblMessage: "Message",
+          message_one: "🌳 We've planted {{count, number}} tree so far!",
+          message_other: "🌳 We've planted {{count, number}} trees so far!",
         },
       },
       ar: {
         translation: {
-          count_label: "العدد",
-          message_label: "الرسالة",
-          message: "🌳 لقد زرعنا {{count}} شجرة حتى الآن!",
+          lblCount: "العدد",
+          lblMessage: "الرسالة",
+          message_zero: "🌳 لم نزرع أي شجرة حتى الآن!",
+          message_one: "🌳 لقد زرعنا شجرة {{count, number}} حتى الآن!",
+          message_two: "🌳 لقد زرعنا شجرتين {{count, number}} حتى الآن!",
+          message_few: "🌳 لقد زرعنا {{count, number}} شجرات حتى الآن!",
+          message_many: "🌳 لقد زرعنا {{count, number}} شجرة حتى الآن!",
+          message_other: "🌳 لقد زرعنا {{count, number}} شجرة حتى الآن!",
         },
       },
     },
