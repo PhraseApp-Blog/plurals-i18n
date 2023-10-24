@@ -30,6 +30,7 @@ i18next
         translation: {
           countLabel: "Count",
           messageLabel: "Message",
+          message_zero: "🌳 We haven't planted any trees yet.",
           message_one: "🌳 We've planted {{count, number}} tree so far!",
           message_other: "🌳 We've planted {{count, number}} trees so far!",
         },
