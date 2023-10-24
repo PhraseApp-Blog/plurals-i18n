@@ -8,8 +8,8 @@ input.value = initialValue;
 input.addEventListener("input", render);
 
 function render() {
-  lblCount.textContent = i18next.t("lblCount");
-  lblMessage.textContent = i18next.t("lblMessage");
+  lblCount.textContent = i18next.t("countLabel");
+  lblMessage.textContent = i18next.t("messageLabel");
 
   output.textContent = i18next.t("message", { count: Number(input.value) });
 }
@@ -28,16 +28,16 @@ i18next
     resources: {
       en: {
         translation: {
-          lblCount: "Count",
-          lblMessage: "Message",
+          countLabel: "Count",
+          messageLabel: "Message",
           message_one: "🌳 We've planted {{count, number}} tree so far!",
           message_other: "🌳 We've planted {{count, number}} trees so far!",
         },
       },
       ar: {
         translation: {
-          lblCount: "العدد",
-          lblMessage: "الرسالة",
+          countLabel: "العدد",
+          messageLabel: "الرسالة",
           message_zero: "🌳 لم نزرع أي شجرة حتى الآن!",
           message_one: "🌳 لقد زرعنا شجرة {{count, number}} حتى الآن!",
           message_two: "🌳 لقد زرعنا شجرتين {{count, number}} حتى الآن!",
