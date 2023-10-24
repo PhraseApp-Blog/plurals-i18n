@@ -3,7 +3,7 @@ const output = document.querySelector("#output");
 const lblCount = document.querySelector("#lblCount");
 const lblMessage = document.querySelector("#lblMessage");
 
-const initialValue = 23456789;
+const initialValue = 1;
 input.value = initialValue;
 input.addEventListener("input", render);
 
